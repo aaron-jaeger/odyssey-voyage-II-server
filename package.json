@@ -8,7 +8,8 @@
     "launch": "node utils/launch.js",
     "postinstall": "npm run install-services",
     "install-services": "node utils/install.js",
-    "db:reset": "node utils/reset.js"
+    "db:reset": "node utils/reset.js",
+    "start:monolith-subgraph": "nodemon monolith.js"
   },
   "nodemonConfig": {
     "ext": "*.js, *.graphql"
@@ -17,6 +18,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/gateway": "^2.0.5",
+    "@apollo/subgraph": "^2.0.5",
     "@prisma/client": "^3.0.2",
     "apollo-datasource": "^3.1.0",
     "apollo-datasource-rest": "^3.2.0",
